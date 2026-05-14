@@ -1,0 +1,9 @@
+﻿{
+  "servers": {
+    "databricks": {
+      "command": "C:/Users/maneesh.eskala/.ai-dev-kit/.venv/Scripts/python.exe",
+      "args": ["C:/Users/maneesh.eskala/.ai-dev-kit/repo/databricks-mcp-server/run_server.py"],
+      "env": {"DATABRICKS_CONFIG_PROFILE": "DEFAULT"}
+    }
+  }
+}

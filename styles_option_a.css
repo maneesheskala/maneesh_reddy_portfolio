@@ -1,0 +1,271 @@
+﻿:root {
+  --bg: #f8f5ee;
+  --ink: #1f2230;
+  --muted: #5b6177;
+  --primary: #0f9d8a;
+  --accent: #ff7a18;
+  --card: #ffffffd9;
+  --line: #d8ddf0;
+  --shadow: 0 18px 45px rgba(31, 34, 48, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at 8% 10%, #ffebc6 0, transparent 30%),
+    radial-gradient(circle at 90% 20%, #c7efe8 0, transparent 28%),
+    radial-gradient(circle at 40% 95%, #c8d9ff 0, transparent 30%),
+    var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.025) 0.5px, transparent 0.5px);
+  background-size: 3px 3px;
+  opacity: 0.25;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 6vw;
+  background: rgba(248, 245, 238, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+}
+
+.brand span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a,
+.contact-links a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.nav-links a:hover,
+.contact-links a:hover {
+  color: var(--primary);
+}
+
+.resume-btn {
+  text-decoration: none;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+main {
+  width: min(1100px, 90vw);
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+}
+
+section {
+  margin-bottom: 4.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.12;
+  margin: 0.3rem 0 1.1rem;
+  max-width: 14ch;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.eyebrow,
+.tag {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  font-size: 0.82rem;
+}
+
+.hero-copy {
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.85rem;
+  margin: 1.5rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.68rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn.primary {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn.ghost {
+  color: var(--ink);
+  background: transparent;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-metrics article,
+.project-card,
+.cert-grid article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.hero-metrics h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.hero-metrics p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  margin-bottom: 0.75rem;
+}
+
+.about p,
+.contact p {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.chips span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: #fff;
+  font-size: 0.92rem;
+}
+
+.project-grid,
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card h3,
+.cert-grid h3 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.project-card p,
+.cert-grid p,
+.project-card li {
+  color: var(--muted);
+}
+
+.project-card ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 6vw;
+  color: var(--muted);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .project-grid,
+  .cert-grid,
+  .hero-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+}
